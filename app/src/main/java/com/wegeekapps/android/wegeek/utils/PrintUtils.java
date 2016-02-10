@@ -14,7 +14,7 @@ public class PrintUtils {
      *
      * @param text
      */
-    public void print(String text) {
+    public static void print(String text) {
         if (BuildConfig.DEBUG) System.out.print(text);
     }
 
@@ -23,7 +23,7 @@ public class PrintUtils {
      *
      * @param text
      */
-    public void println(String text) {
+    public static void println(String text) {
         if (BuildConfig.DEBUG) System.out.println(text);
     }
 
@@ -32,7 +32,7 @@ public class PrintUtils {
      *
      * @param text
      */
-    public void log(String text) {
+    public static void log(String text) {
         if (BuildConfig.DEBUG) Log.v("DEBUG", text);
     }
 

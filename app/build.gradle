@@ -1,4 +1,18 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+    }
+}
+
+plugins {
+    id "me.tatarka.retrolambda" version "3.2.4"
+}
+
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 22
@@ -17,7 +31,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // 使用Java1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
+
+
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -27,7 +49,13 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.facebook.fresco:fresco:0.8.0'
     compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.alibaba:fastjson:1.2.7'
     compile 'com.jakewharton:butterknife:7.0.1'
+    //网络请求
+    compile 'com.squareup.okhttp:okhttp:2.7.0'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
 }

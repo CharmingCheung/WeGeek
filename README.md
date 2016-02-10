@@ -1,2 +1,2 @@
 #WeGeekApps(Android)
-##An application about erotic,coming soon!
+##An application demo with [RxJava](https://github.com/ReactiveX/RxJava) , [Retrofit](https://github.com/square/retrofit) . And [Dagger](https://github.com/square/dagger) is comming soon.
